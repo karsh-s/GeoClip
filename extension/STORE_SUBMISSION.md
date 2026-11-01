@@ -38,9 +38,10 @@ which is what keeps this compliant with the remote-code policy. Uploading
 GeoGuessr Assistant
 ```
 
-**Short description** (132 char limit; this is 118)
+**Short description** (132 char limit; this is 125). Lives in `manifest.json`,
+so changing it needs a repackage.
 ```
-Predicts the country from Street View imagery with an on-device model, and shows the visual evidence behind the guess.
+Predicts the country from Street View imagery with an on-device model, and shows which of that country's cues match the view.
 ```
 
 **Category:** Just for Fun
@@ -49,7 +50,8 @@ Predicts the country from Street View imagery with an on-device model, and shows
 **Detailed description**
 ```
 GeoGuessr Assistant shows a country prediction for the Street View panorama
-currently on screen, together with the visual cues the model used to reach it.
+currently on screen, together with which of that country's typical visual cues
+best match the view.
 
 Everything runs on your own device. There is nothing to install beyond the
 extension itself, no account, and no server.
@@ -63,10 +65,11 @@ four compass-heading views, and runs a CLIP-based classifier trained on
 polygon-verified Street View coverage across 41 European countries.
 
 The result appears in a draggable panel: the top five countries with
-confidence bars, a map highlighting the leading guess, and the visual cues --
-road markings, bollards, licence plates, architecture, vegetation -- that
-pushed the model toward it. Predictions accumulate across every panorama you
-visit, so the estimate sharpens as you move.
+confidence bars, a map highlighting the leading guess, and which of that
+country's typical cues -- road markings, bollards, licence plates,
+architecture, vegetation -- best match what is on screen. Predictions
+accumulate across every panorama you visit, so the estimate sharpens as you
+move.
 
 PRIVACY
 
