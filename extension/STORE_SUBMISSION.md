@@ -100,7 +100,7 @@ geoguessr.com, openguessr.com, worldguessr.com, freeguessr.com
 
 OPEN SOURCE
 
-https://github.com/karsh-s/geogussr-cheat
+https://github.com/karsh-s/GeoClip
 ```
 
 ---
@@ -159,7 +159,7 @@ browser. Then certify:
 
 **Privacy policy URL**
 ```
-https://github.com/karsh-s/geogussr-cheat/blob/main/PRIVACY.md
+https://github.com/karsh-s/GeoClip/blob/main/PRIVACY.md
 ```
 
 ---

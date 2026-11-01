@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         GeoCLIP Assistant
-// @namespace    https://github.com/karsh-s/geogussr-cheat
+// @namespace    https://github.com/karsh-s/GeoClip
 // @version      1.0
 // @description  Country prediction overlay driven by your local GeoCLIP model
 // @match        https://www.geoguessr.com/*

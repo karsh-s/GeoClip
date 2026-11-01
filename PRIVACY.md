@@ -105,4 +105,4 @@ updated date, and shipped alongside a new extension version.
 
 ## Contact
 
-Open an issue at <https://github.com/karsh-s/geogussr-cheat/issues>.
+Open an issue at <https://github.com/karsh-s/GeoClip/issues>.

@@ -29,6 +29,12 @@ async function init() {
   ort.env.wasm.wasmPaths = url('vendor/');
   ort.env.logLevel = 'error';
 
+  // onnxruntime's native logger is separate from ort-web's, and its warnings
+  // go to stderr, which Chrome surfaces as extension errors. The one it always
+  // emits here is VerifyEachNodeIsAssignedToAnEp -- some ops have no WebGPU
+  // kernel and fall back to CPU, which is expected. Hence logSeverityLevel 3
+  // on each session below: errors still surface, routine warnings do not.
+
   const visualBytes = new Uint8Array(
     await (await fetch(url('model/' + META.visual))).arrayBuffer());
   const headBytes = new Uint8Array(
@@ -39,7 +45,9 @@ async function init() {
   const eps = navigator.gpu ? ['webgpu', 'wasm'] : ['wasm'];
   for (const ep of eps) {
     try {
-      VISUAL = await ort.InferenceSession.create(visualBytes, { executionProviders: [ep] });
+      VISUAL = await ort.InferenceSession.create(visualBytes, {
+        executionProviders: [ep], logSeverityLevel: 3,
+      });
       BACKEND = ep;
       break;
     } catch (e) {
@@ -47,7 +55,9 @@ async function init() {
     }
   }
   if (!VISUAL) throw new Error('no usable backend for the visual model');
-  HEAD = await ort.InferenceSession.create(headBytes, { executionProviders: ['wasm'] });
+  HEAD = await ort.InferenceSession.create(headBytes, {
+    executionProviders: ['wasm'], logSeverityLevel: 3,
+  });
 
   if (META.cue_mode === 'scored' && META.cues && Object.keys(META.cues).length) {
     const buf = await (await fetch(url('model/cues.f32'))).arrayBuffer();

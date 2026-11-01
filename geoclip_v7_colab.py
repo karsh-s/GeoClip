@@ -448,7 +448,7 @@ def report(probs, tag):
 try:
     import geotips_prompts
 except ImportError:
-    !wget -q https://raw.githubusercontent.com/karsh-s/geogussr-cheat/main/geotips_prompts.py
+    !wget -q https://raw.githubusercontent.com/karsh-s/GeoClip/main/geotips_prompts.py
     try:
         import geotips_prompts
     except ImportError:
