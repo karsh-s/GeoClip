@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "GeoCLIP Assistant",
+  "name": "GeoGuessr Assistant",
   "version": "2.0.0",
   "description": "Predicts the country from Street View imagery with an on-device model, and shows the visual evidence behind the guess.",
   "icons": {
@@ -22,7 +22,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "GeoCLIP Assistant",
+    "default_title": "GeoGuessr Assistant",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

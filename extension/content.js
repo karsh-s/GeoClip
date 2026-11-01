@@ -1,5 +1,5 @@
 /*
- * GeoCLIP Assistant — content script.
+ * GeoGuessr Assistant — content script.
  *
  * Reads the Street View panorama id out of the page's own tile requests,
  * runs the on-device model over it, and shows the answer with a map

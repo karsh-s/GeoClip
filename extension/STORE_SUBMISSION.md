@@ -1,4 +1,4 @@
-# Chrome Web Store submission — GeoCLIP Assistant
+# Chrome Web Store submission — GeoGuessr Assistant
 
 Everything below is copy-paste ready for
 <https://chrome.google.com/webstore/devconsole>.
@@ -35,7 +35,7 @@ which is what keeps this compliant with the remote-code policy. Uploading
 
 **Name**
 ```
-GeoCLIP Assistant
+GeoGuessr Assistant
 ```
 
 **Short description** (132 char limit; this is 118)
@@ -48,7 +48,7 @@ Predicts the country from Street View imagery with an on-device model, and shows
 
 **Detailed description**
 ```
-GeoCLIP Assistant shows a country prediction for the Street View panorama
+GeoGuessr Assistant shows a country prediction for the Street View panorama
 currently on screen, together with the visual cues the model used to reach it.
 
 Everything runs on your own device. There is nothing to install beyond the

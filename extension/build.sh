@@ -17,7 +17,7 @@ for f in vendor/ort.webgpu.min.js vendor/ort-wasm-simd-threaded.jsep.wasm; do
 done
 
 VER=$(python3 -c "import json;print(json.load(open('manifest.json'))['version'])")
-OUT="geoclip-assistant-${VER}.zip"
+OUT="geoguessr-assistant-${VER}.zip"
 rm -f "$OUT"
 
 zip -r -X "$OUT" \

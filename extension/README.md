@@ -1,4 +1,4 @@
-# GeoCLIP Assistant — Chrome extension
+# GeoGuessr Assistant — Chrome extension
 
 Shows what country your trained model thinks a Street View panorama is
 in, with a map and the visual evidence behind the guess.
