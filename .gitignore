@@ -13,3 +13,6 @@ testCountries/
 # Web Store build artifacts
 extension/*.zip
 extension/store_screenshot_*.png
+extension/model/*.onnx
+extension/model/*.f32
+extension/vendor/*.wasm

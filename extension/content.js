@@ -2,8 +2,9 @@
  * GeoCLIP Assistant — content script.
  *
  * Reads the Street View panorama id out of the page's own tile requests,
- * asks the local server what country the imagery looks like, and shows
- * the answer with a map and the visual evidence behind it.
+ * runs the on-device model over it, and shows the answer with a map
+ * and the visual evidence behind it. Nothing leaves the machine except
+ * the request for the panorama's own image tiles.
  *
  * It predicts from pixels. It does not read the game's answer, place
  * pins, or submit guesses.
@@ -12,12 +13,12 @@
 (function () {
   'use strict';
 
-  const CFG = { server: '', hotkey: 'g', autoShow: false };
+  const CFG = { hotkey: 'g', autoShow: false };
 
   // ── Solo-play guard ──────────────────────────────────────
   // The assistant is for solo play. In any mode where a live opponent is
-  // involved it disables itself: no predictions, no panel, nothing sent
-  // to the server. Matching is on the URL, which is reliable across all
+  // involved it disables itself: no predictions, no panel, no inference
+  // at all. Matching is on the URL, which is reliable across all
   // four supported sites, and is re-checked on every SPA navigation.
   const MULTIPLAYER_RE = [
     /\/duels?(\/|$)/i,            // GeoGuessr Duels / Team Duels
@@ -278,15 +279,15 @@
     if (ui) ui.status.textContent = 'reset — move to load a panorama';
   }
 
-  // ── Server ───────────────────────────────────────────────
+  // ── Model ────────────────────────────────────────────────
   function checkHealth() {
     chrome.runtime.sendMessage({ type: 'health' }, (r) => {
       if (!ui) return;
       if (r && r.ok) {
         cueMode = r.data.cue_mode || 'none';
-        ui.status.textContent = `${r.data.model} · ${r.data.mode} · ${r.data.countries} countries`;
+        ui.status.textContent = `${r.data.backend} · ${r.data.countries} countries`;
       } else {
-        ui.status.textContent = 'server offline — start geoguessr_server.py';
+        ui.status.textContent = (r && r.error) || 'model failed to load';
       }
     });
   }
@@ -299,7 +300,7 @@
     chrome.runtime.sendMessage({ type: 'predict', panoId }, (r) => {
       busy = false;
       if (!r || !r.ok) {
-        if (ui) ui.status.textContent = (r && r.error) || 'server offline';
+        if (ui) ui.status.textContent = (r && r.error) || 'model unavailable';
         return;
       }
       const d = r.data;

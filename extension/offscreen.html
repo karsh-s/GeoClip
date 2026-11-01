@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>GeoCLIP inference</title>
+</head>
+<body>
+<!--
+  Nothing is ever shown here. WebGPU is not available to a service worker,
+  so the model runs in this offscreen document instead; the worker talks to
+  it by message. See background.js.
+-->
+<script src="vendor/ort.webgpu.min.js"></script>
+<script type="module" src="offscreen.js"></script>
+</body>
+</html>

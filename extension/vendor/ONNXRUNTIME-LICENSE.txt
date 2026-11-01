@@ -1,0 +1,10 @@
+onnxruntime-web 1.20.1
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the MIT License.
+
+Bundled files:
+  ort.webgpu.min.js
+  ort-wasm-simd-threaded.jsep.wasm
+  ort-wasm-simd-threaded.jsep.mjs
+
+Full text: https://github.com/microsoft/onnxruntime/blob/main/LICENSE
