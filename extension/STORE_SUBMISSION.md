@@ -162,9 +162,26 @@ cookies, no form fields.
 
 **Remote code:** No, I am not using remote code.
 
-**Data usage — tick nothing.** The extension collects none of the listed
-categories. Nothing is sent to the developer, and no imagery leaves the
-browser. Then certify:
+**Data usage — tick `Website content`, and nothing else.**
+
+This is a judgement call, because Google never defines "collect". What its
+User Data FAQ does say is that disclosure applies "even when data is processed
+or stored locally on a user's device" and even when data "is not transmitted
+to external servers or third parties". The content script reads tile URLs out
+of the page and the extension downloads and processes panorama imagery, which
+is website content under anyone's reading -- so it gets declared even though
+none of it leaves the browser.
+
+The asymmetry decides it: under-disclosing is a removal reason, over-disclosing
+costs nothing. Everything else stays unticked --
+
+- not *Location*: it infers where a **panorama** is, never where the user is
+- not *Web history*: it reads the current URL to switch itself off in
+  multiplayer, and neither stores nor transmits it
+- not *User activity*: one keydown listener for the show/hide hotkey is not
+  keystroke logging
+
+Then tick all three certifications, each of which is true:
 - [x] I do not sell or transfer user data to third parties, outside of the approved use cases
 - [x] I do not use or transfer user data for purposes unrelated to my item's single purpose
 - [x] I do not use or transfer user data to determine creditworthiness or for lending purposes
