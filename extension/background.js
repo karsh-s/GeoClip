@@ -25,7 +25,7 @@ async function ensureDocument() {
     url: OFFSCREEN,
     reasons: ['BLOBS', 'WORKERS'],
     justification:
-      'Decodes Street View image tiles and runs the country-classification '
+      'Decodes Street View image tiles and runs the country-classification ' +
       'model, which needs WebGPU and therefore a document context.',
   }).finally(() => { creating = null; });
   return creating;

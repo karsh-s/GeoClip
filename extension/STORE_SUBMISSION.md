@@ -2,7 +2,7 @@
 
 Everything below is copy-paste ready for
 <https://chrome.google.com/webstore/devconsole>.
-Build the upload with `./build.sh` → `geoclip-assistant-1.0.0.zip`.
+Build the upload with `./build.sh` → `geoclip-assistant-2.0.0.zip`.
 
 ---
 
@@ -173,7 +173,7 @@ https://github.com/karsh-s/geogussr-cheat/blob/main/PRIVACY.md
 | Small promo tile | 440×280 PNG | Only if you want to be featured |
 | Marquee promo tile | 1400×560 PNG | Only if you want to be featured |
 
-Take the screenshot with the panel open and the server running, then run
+Take the screenshot with the panel open, then run
 `python3 make_screenshot.py <your.png>` to pad it to exactly 1280×800.
 
 ---
