@@ -1,8 +1,8 @@
-# Privacy Policy — GeoCLIP Assistant
+# Privacy Policy — GeoGuessr Assistant
 
-**Last updated: 31 October 2026**
+**Last updated: 1 November 2026**
 
-GeoCLIP Assistant displays a country prediction for the Street View imagery
+GeoGuessr Assistant displays a country prediction for the Street View imagery
 currently on screen. The model runs **on your own device**, inside the
 extension. This policy describes every piece of data the extension touches.
 
@@ -15,6 +15,13 @@ The developer operates no backend, no analytics, no telemetry, no error
 reporting, and no advertising. There is no account, no sign-in, and no
 identifier of any kind. No prediction, image, or browsing activity is ever
 sent to the developer.
+
+The extension does **read and process website content** on the supported
+sites: the panorama identifiers carried in the page's own tile URLs, and the
+Street View imagery it then downloads. All of that processing happens in your
+browser and none of it is transmitted to the developer. It is declared under
+*Website content* in this extension's Chrome Web Store data disclosure for
+that reason. The two sections below describe it in full.
 
 ## What the extension stores on your device
 
