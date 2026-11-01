@@ -49,61 +49,70 @@ Predicts the country from Street View imagery with an on-device model, and shows
 
 **Detailed description**
 ```
-GeoGuessr Assistant shows a country prediction for the Street View panorama
-currently on screen, together with which of that country's typical visual cues
-best match the view.
+Some rounds you know on sight. Others you spin in a circle on a gravel track
+under a grey sky with absolutely nothing to go on.
 
-Everything runs on your own device. There is nothing to install beyond the
-extension itself, no account, and no server.
+This is for the second kind.
 
-HOW IT WORKS
+Press G. A panel slides in with the five countries most likely to be the one
+you are standing in -- and then it tells you what made it think so.
 
-The page loads Street View image tiles, and those tile URLs contain a
-panorama identifier. The extension reads that identifier, downloads that
-panorama's own tiles, stitches them into a full 360 view, reprojects it into
-four compass-heading views, and runs a CLIP-based classifier trained on
-polygon-verified Street View coverage across 41 European countries.
 
-The result appears in a draggable panel: the top five countries with
-confidence bars, a map highlighting the leading guess, and which of that
-country's typical cues -- road markings, bollards, licence plates,
-architecture, vegetation -- best match what is on screen. Predictions
-accumulate across every panorama you visit, so the estimate sharpens as you
-move.
+WHAT THE PANEL GIVES YOU
 
-PRIVACY
+The guess. 41 European countries, ranked by probability.
 
-No analytics, no telemetry, no accounts, and no developer-operated server.
-The model and its runtime are bundled in the extension; the classification
-happens in your browser and the imagery is never uploaded anywhere. The only
-network request the extension makes is for the panorama's own image tiles,
-fetched from Google without credentials.
+How sure it is. 82% on Iceland means commit. 38% on Malta with Spain right
+behind it means slow down and look again. The spread is as useful as the
+answer, and it is the part most tools never show you.
+
+The reasons. Yellow centre lines. Bollard shapes. Licence plates, roof tiles,
+road paint, the plants growing on the verge. The panel surfaces the cues of
+the leading country that best match what is actually in front of you.
+
+It keeps up. Move down the road and it reads each new panorama, and the
+estimate sharpens as you go.
+
+
+LEARN THE META, NOT JUST THE ANSWER
+
+Plenty of tools hand you a pin. This one hands you an argument.
+
+After a few dozen rounds you start catching the bollards yourself, and the
+reflector posts, and the particular grey of a Nordic sky. That is the point.
+It is a second opinion you can interrogate, not an autopilot -- and when it
+is only 38% sure, you will know to trust your own eyes instead.
+
+
+IT ALL HAPPENS ON YOUR MACHINE
+
+No account. No sign-up. No server to run. Nothing to configure.
+
+The neural network ships inside the extension, which is why the download is
+about 160 MB. Your screen is never captured, never uploaded, never seen by
+anyone. No analytics, no telemetry, no developer server -- there is nothing
+to send anything to. The one request it makes is to Google, for the Street
+View imagery of the panorama you are already looking at.
+
 
 SOLO PLAY ONLY
 
-The extension deliberately disables itself when the page URL indicates a
-multiplayer mode -- duels, team duels, battle royale, parties, lobbies,
-ranked and similar. In those modes the panel shows "solo play only" and no
-prediction is made.
+The extension switches itself off in duels, team duels, battle royale,
+parties, lobbies and ranked. In those modes the panel says "solo play only"
+and makes no guess. That is deliberate, and it is not a setting.
 
-Using any assistance tool may still breach the terms of service of the site
-you use it on, including in single-player. That is between you and that
-site; please read their rules.
+Even in single-player, using any assistance tool may breach the rules of the
+site you are on. That is between you and them, so go and read them.
 
-SIZE
 
-The download is large (about 160 MB) because the neural network ships with
-the extension rather than being fetched from a server. This is deliberate:
-it is what allows the extension to work entirely offline and to send no
-imagery anywhere.
-
-SUPPORTED SITES
+WORKS ON
 
 geoguessr.com, openguessr.com, worldguessr.com, freeguessr.com
 
+
 OPEN SOURCE
 
-https://github.com/karsh-s/GeoClip
+Every line of it: https://github.com/karsh-s/GeoClip
 ```
 
 ---
