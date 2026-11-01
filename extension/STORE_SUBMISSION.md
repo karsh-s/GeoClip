@@ -164,7 +164,47 @@ https://github.com/karsh-s/GeoClip/blob/main/PRIVACY.md
 
 ---
 
-## 5. Graphics you still need to make
+## 5. Test instructions tab
+
+A reviewer who installs this and opens geoguessr.com will see nothing at
+all: the panel is behind a hotkey, and the extension disables itself in
+multiplayer. Without these instructions the likeliest outcome is a
+rejection for not working. Paste this into the **Test instructions** tab.
+
+```
+No account, login or credentials are needed.
+
+1. Open https://www.geoguessr.com/ and start a SINGLE-PLAYER round on any
+   map. The extension deliberately disables itself in duels, team duels,
+   battle royale, parties and ranked modes; in those it shows "solo play
+   only" and makes no prediction.
+
+2. Press the "g" key. A panel appears in the top-left corner.
+
+3. The first prediction takes a few seconds while the model loads. The
+   model is read from inside the extension package, not downloaded.
+   Later predictions take about one second.
+
+4. The panel shows the five most likely countries with confidence bars,
+   a map of the leading country, and the visual cues of that country
+   which best match the image on screen.
+
+If the panel says it is waiting for a panorama, pan or move once so the
+page requests new Street View tiles. The extension reads the panorama
+identifier out of those tile URLs; it does not read anything else on the
+page.
+
+The same works on openguessr.com, worldguessr.com and freeguessr.com.
+
+The classifier and the onnxruntime-web runtime are both bundled in the
+package. The only network request the extension makes is to
+https://streetviewpixels-pa.googleapis.com/ for the image tiles of the
+panorama being viewed, sent without credentials.
+```
+
+---
+
+## 6. Graphics you still need to make
 
 | Asset | Size | Required |
 |---|---|---|
@@ -178,7 +218,7 @@ Take the screenshot with the panel open, then run
 
 ---
 
-## 6. Distribution
+## 7. Distribution
 
 - **Visibility:** Public, or Unlisted if you'd rather share by link only.
   Unlisted still goes through the same review.
@@ -186,7 +226,7 @@ Take the screenshot with the panel open, then run
 
 ---
 
-## 7. What to expect from review
+## 8. What to expect from review
 
 Typical turnaround is a few hours to a few business days. First submissions
 and anything touching host permissions often sit at the longer end.
@@ -205,7 +245,7 @@ Realistic grounds for rejection, and what to do:
   to remove an extension that interferes with their service. If that happens
   the listing is taken down; it is not appealable in any practical sense.
 
-## 8. What was verified before submitting
+## 9. What was verified before submitting
 
 Numbers from this build, not estimates:
 
