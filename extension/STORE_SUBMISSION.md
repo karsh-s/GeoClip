@@ -65,7 +65,7 @@ ranked by probability, with a map of the region the leader is in.
 
 How sure it is -- honestly. The percentages are calibrated against thousands
 of locations the model never trained on. When it says 90% or more, it is
-right about 97% of the time; when it says around 50%, nearer two in three. So a high
+right about 98% of the time; when it says around 50%, about 60%. So a high
 number means commit, and a low one with a close second means slow down and
 look again. The spread is as useful as the answer, and it is the part most
 tools never show you.
@@ -76,7 +76,7 @@ the leading country that best match what is actually in front of you -- for
 every one of the 119.
 
 It keeps up. Move down the road and it reads each new panorama, and the
-estimate sharpens as you go.
+estimate sharpens as you go. When the next round starts, it clears itself.
 
 
 LEARN THE META, NOT JUST THE ANSWER
@@ -306,13 +306,14 @@ Numbers from this build, not estimates:
 | onnxruntime-web WebGPU | 1.1 s per guess |
 | onnxruntime-web WASM | 7.1 s per guess (fallback) |
 | Tile fetch from extension | works: Referer not required, endpoint returns `Access-Control-Allow-Origin` for `chrome-extension://` origins |
-| 3.0 global head ONNX vs PyTorch | maxdiff 3.1e-05, temperature 0.526 folded into the last layer |
+| 3.0 model | CLIP ViT-B/16, top 8 blocks fine-tuned on Street View; head over 576 sub-country regions summed to 119 countries, temperature 0.638 folded in |
+| 3.0 fp16 export vs PyTorch | top-1 agreement 100%, min cosine 0.99999; head maxdiff 7.6e-06 |
 | 3.0 training data | 63,356 locations x 4 views; quotas scaled by country size (5x for the largest, e.g. US, Russia, Brazil) |
-| 3.0 held-out test, 119 countries | 9,803 locations in areas never trained on: top-1 72.9%, top-3 88.7%, top-5 93.5%; per-country average 76.2% |
-| 3.0 calibration (held-out) | ECE 0.279 before temperature, 0.092 after; 80–100% band said 93%, was 97% |
-| 3.0 live, full shipped path | 234 fresh panoramas, raw tiles, fp16 visual + head.onnx: top-1 73.1%, top-5 90.6%, ECE 0.076 |
+| 3.0 held-out test, 119 countries | 9,803 locations in areas never trained on: top-1 80.9%, top-3 93.1%, top-5 96.2%; per-country average 83.8% |
+| 3.0 calibration (held-out) | ECE 0.069; 80–100% band said 95%, was 98%; 40–60% band said 50%, was 61% |
+| 3.0 live, full shipped path | 151 fresh panoramas, raw tiles, fp16 visual + head.onnx: top-1 85.4% (2.x head on the same: 74.8%), top-5 98.0% |
 | 3.0 cues | 627 captions, 5–7 for each of the 119 countries; the 216 unchanged ones re-embed to cosine 1.00000 against 2.0's file; against labelled imagery a cue ranks its own country 2nd of 119 on median, 82% in the top 5 (new countries and the original 41 score the same) |
-| 3.0 vs 2.0 on Europe | 3,729 held-out European locations: 2.0 (41-way) 49.5%, 3.0 (119-way) 60.1% |
+| 3.0 vs 2.0 on Europe | 3,729 held-out European locations: 2.0 (41-way) 49.5%, 3.0 (119-way) 67.4% |
 
 int8 quantisation was tried and rejected: 48% top-1 agreement, a different
 and much worse model. Do not revisit it without re-measuring.
