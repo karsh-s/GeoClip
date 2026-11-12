@@ -2,7 +2,7 @@
 
 Everything below is copy-paste ready for
 <https://chrome.google.com/webstore/devconsole>.
-Build the upload with `./build.sh` → `geoclip-assistant-2.0.0.zip`.
+Build the upload with `./build.sh` → `geoguessr-assistant-3.0.0.zip`.
 
 ---
 
@@ -21,7 +21,7 @@ Build the upload with `./build.sh` → `geoclip-assistant-2.0.0.zip`.
 
 ## 2. Package
 
-`geoclip-assistant-2.0.0.zip` — **160 MB** (196 MB unpacked), 24 files, no
+`geoguessr-assistant-3.0.0.zip` — **160 MB** (196 MB unpacked), 24 files, no
 remote code.
 
 The bulk is the model (173 MB fp16) and onnxruntime-web's WASM runtime
@@ -38,10 +38,10 @@ which is what keeps this compliant with the remote-code policy. Uploading
 GeoGuessr Assistant
 ```
 
-**Short description** (132 char limit; this is 125). Lives in `manifest.json`,
+**Short description** (132 char limit; this is 118). Lives in `manifest.json`,
 so changing it needs a repackage.
 ```
-Predicts the country from Street View imagery with an on-device model, and shows which of that country's cues match the view.
+Predicts the country from Street View imagery with an on-device model, with honest confidence and a map of the region.
 ```
 
 **Category:** Just for Fun
@@ -60,15 +60,20 @@ you are standing in -- and then it tells you what made it think so.
 
 WHAT THE PANEL GIVES YOU
 
-The guess. 41 European countries, ranked by probability.
+The guess. 119 countries and territories, from Iceland to American Samoa,
+ranked by probability, with a map of the region the leader is in.
 
-How sure it is. 82% on Iceland means commit. 38% on Malta with Spain right
-behind it means slow down and look again. The spread is as useful as the
-answer, and it is the part most tools never show you.
+How sure it is -- honestly. The percentages are calibrated against thousands
+of locations the model never trained on. When it says 90% or more, it is
+right about 97% of the time; when it says around 50%, nearer two in three. So a high
+number means commit, and a low one with a close second means slow down and
+look again. The spread is as useful as the answer, and it is the part most
+tools never show you.
 
 The reasons. Yellow centre lines. Bollard shapes. Licence plates, roof tiles,
 road paint, the plants growing on the verge. The panel surfaces the cues of
-the leading country that best match what is actually in front of you.
+the leading country that best match what is actually in front of you -- for
+every one of the 119.
 
 It keeps up. Move down the road and it reads each new panorama, and the
 estimate sharpens as you go.
@@ -81,7 +86,7 @@ Plenty of tools hand you a pin. This one hands you an argument.
 After a few dozen rounds you start catching the bollards yourself, and the
 reflector posts, and the particular grey of a Nordic sky. That is the point.
 It is a second opinion you can interrogate, not an autopilot -- and when it
-is only 38% sure, you will know to trust your own eyes instead.
+is only 30% sure, you will know to trust your own eyes instead.
 
 
 IT ALL HAPPENS ON YOUR MACHINE
@@ -107,7 +112,7 @@ site you are on. That is between you and them, so go and read them.
 
 WORKS ON
 
-geoguessr.com, openguessr.com, worldguessr.com, freeguessr.com
+geoguessr.com, openguessr.com, worldguessr.com
 
 
 OPEN SOURCE
@@ -152,12 +157,24 @@ extension can contact; it has no access to any other server, including any
 belonging to the developer.
 ```
 
-Content script host access (the four guessing sites)
+Content script host access (the three guessing sites)
 ```
 To read the Street View panorama identifier out of the URLs of image tiles
 the page is already loading, and to draw the prediction panel over the page.
 The extension reads no other page content: no account data, no page text, no
 cookies, no form fields.
+```
+
+Content script on `https://www.google.com/maps/embed/*`
+```
+OpenGuessr and WorldGuessr show Street View inside a Google Maps embed
+iframe, so the panorama's image tiles are requested from inside that
+iframe rather than by the game page. A small script runs only in those
+embed frames, and only when the page around them is one of the three
+supported games (checked with location.ancestorOrigins; on any other site
+it exits immediately). It reads the panorama identifier out of the tile
+URLs and passes it to the panel on the game page. It does not read the
+embed's own URL, page content, cookies or anything else.
 ```
 
 **Remote code:** No, I am not using remote code.
@@ -215,15 +232,16 @@ No account, login or credentials are needed.
    Later predictions take about one second.
 
 4. The panel shows the five most likely countries with confidence bars,
-   a map of the leading country, and the visual cues of that country
-   which best match the image on screen.
+   a map of the region the leading country is in (Europe, the Americas,
+   Africa, the Middle East, Asia or Oceania), and the visual cues of that
+   country which best match the image on screen.
 
 If the panel says it is waiting for a panorama, pan or move once so the
 page requests new Street View tiles. The extension reads the panorama
 identifier out of those tile URLs; it does not read anything else on the
 page.
 
-The same works on openguessr.com, worldguessr.com and freeguessr.com.
+The same works on openguessr.com and worldguessr.com.
 
 The classifier and the onnxruntime-web runtime are both bundled in the
 package. The only network request the extension makes is to
@@ -270,7 +288,7 @@ Realistic grounds for rejection, and what to do:
 - **Host permission scope.** One host, used for one purpose, with the
   justification above. This is a much easier case than the previous
   localhost build.
-- **A complaint from one of the four sites.** A site operator can ask Google
+- **A complaint from one of the three sites.** A site operator can ask Google
   to remove an extension that interferes with their service. If that happens
   the listing is taken down; it is not appealable in any practical sense.
 
@@ -288,6 +306,13 @@ Numbers from this build, not estimates:
 | onnxruntime-web WebGPU | 1.1 s per guess |
 | onnxruntime-web WASM | 7.1 s per guess (fallback) |
 | Tile fetch from extension | works: Referer not required, endpoint returns `Access-Control-Allow-Origin` for `chrome-extension://` origins |
+| 3.0 global head ONNX vs PyTorch | maxdiff 3.1e-05, temperature 0.526 folded into the last layer |
+| 3.0 training data | 63,356 locations x 4 views; quotas scaled by country size (5x for the largest, e.g. US, Russia, Brazil) |
+| 3.0 held-out test, 119 countries | 9,803 locations in areas never trained on: top-1 72.9%, top-3 88.7%, top-5 93.5%; per-country average 76.2% |
+| 3.0 calibration (held-out) | ECE 0.279 before temperature, 0.092 after; 80–100% band said 93%, was 97% |
+| 3.0 live, full shipped path | 234 fresh panoramas, raw tiles, fp16 visual + head.onnx: top-1 73.1%, top-5 90.6%, ECE 0.076 |
+| 3.0 cues | 627 captions, 5–7 for each of the 119 countries; the 216 unchanged ones re-embed to cosine 1.00000 against 2.0's file; against labelled imagery a cue ranks its own country 2nd of 119 on median, 82% in the top 5 (new countries and the original 41 score the same) |
+| 3.0 vs 2.0 on Europe | 3,729 held-out European locations: 2.0 (41-way) 49.5%, 3.0 (119-way) 60.1% |
 
 int8 quantisation was tried and rejected: 48% top-1 agreement, a different
 and much worse model. Do not revisit it without re-measuring.

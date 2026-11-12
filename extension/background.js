@@ -47,6 +47,15 @@ chrome.runtime.onMessage.addListener((msg, _sender, reply) => {
     settings().then((s) => reply({ ok: true, data: s }));
     return true;
   }
+  // A panorama seen inside a Street View embed (OpenGuessr, WorldGuessr):
+  // hand it to the panel in the same tab's top frame. If that frame is not
+  // a supported game there is no listener and the message goes nowhere.
+  if (msg.type === 'embedPano') {
+    if (_sender.tab && _sender.tab.id >= 0) {
+      chrome.tabs.sendMessage(_sender.tab.id, msg, { frameId: 0 }).catch(() => {});
+    }
+    return;
+  }
   if (msg.type === 'health' || msg.type === 'predict') {
     toOffscreen(msg)
       .then((r) => reply(r || { ok: false, error: 'no response from model' }))
