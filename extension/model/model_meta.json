@@ -1,46 +1,124 @@
 {
   "classes": [
     "Albania",
+    "American Samoa",
     "Andorra",
+    "Argentina",
+    "Australia",
     "Austria",
+    "Bangladesh",
     "Belgium",
+    "Bermuda",
+    "Bhutan",
+    "Bolivia",
     "Bosnia and Herzegovina",
+    "Botswana",
+    "Brazil",
     "Bulgaria",
+    "Cambodia",
+    "Canada",
+    "Chile",
+    "Christmas Island",
+    "Colombia",
+    "Costa Rica",
     "Croatia",
+    "Curaçao",
     "Cyprus",
     "Czech Republic",
     "Denmark",
+    "Dominican Republic",
+    "Ecuador",
     "Estonia",
+    "Eswatini",
+    "Faroe Islands",
     "Finland",
     "France",
     "Germany",
+    "Ghana",
+    "Gibraltar",
     "Greece",
+    "Greenland",
+    "Guam",
+    "Guatemala",
+    "Hong Kong",
     "Hungary",
     "Iceland",
+    "India",
+    "Indonesia",
     "Ireland",
+    "Isle of Man",
+    "Israel",
     "Italy",
+    "Japan",
+    "Jersey",
+    "Jordan",
+    "Kazakhstan",
+    "Kenya",
+    "Kosovo",
+    "Kyrgyzstan",
+    "Laos",
     "Latvia",
+    "Lebanon",
+    "Lesotho",
     "Liechtenstein",
     "Lithuania",
     "Luxembourg",
+    "Macau",
+    "Madagascar",
+    "Malaysia",
     "Malta",
+    "Mexico",
     "Monaco",
+    "Mongolia",
     "Montenegro",
+    "Namibia",
+    "Nepal",
     "Netherlands",
+    "New Zealand",
+    "Nigeria",
     "North Macedonia",
+    "Northern Mariana Islands",
     "Norway",
+    "Oman",
+    "Palestine",
+    "Panama",
+    "Paraguay",
+    "Peru",
+    "Philippines",
     "Poland",
     "Portugal",
+    "Puerto Rico",
+    "Qatar",
     "Romania",
+    "Russia",
+    "Rwanda",
+    "Réunion",
+    "San Marino",
+    "Senegal",
     "Serbia",
+    "Singapore",
     "Slovakia",
     "Slovenia",
+    "South Africa",
+    "South Korea",
     "Spain",
+    "Sri Lanka",
+    "Svalbard",
     "Sweden",
     "Switzerland",
+    "São Tomé and Príncipe",
+    "Taiwan",
+    "Thailand",
+    "Tunisia",
     "Turkey",
+    "US Virgin Islands",
+    "Uganda",
     "Ukraine",
-    "United Kingdom"
+    "United Arab Emirates",
+    "United Kingdom",
+    "United States",
+    "Uruguay",
+    "Vietnam"
   ],
   "input_size": 224,
   "mean": [
@@ -76,6 +154,24 @@
       "offset": 0,
       "count": 5
     },
+    "American Samoa": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "open sided fale meeting houses and large white village churches",
+        "steep jungle covered volcanic slopes above a coastal road",
+        "American style road signs on a small Pacific island",
+        "yellow centre lines on a narrow road beside the sea",
+        "coconut palms, breadfruit trees and graves in front yards"
+      ],
+      "offset": 5,
+      "count": 5
+    },
     "Andorra": {
       "labels": [
         "arch",
@@ -91,8 +187,48 @@
         "white lines on winding mountain switchback roads",
         "dense hillside apartment blocks in narrow valleys"
       ],
-      "offset": 5,
+      "offset": 10,
       "count": 5
+    },
+    "Argentina": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "low flat roofed brick and concrete houses with front fences",
+        "flat pampas grassland with cattle fences and windbreak trees",
+        "Spanish language signs, RN and RP route markers",
+        "yellow centre lines with white edge lines on long straight roads",
+        "wooden utility poles along wide empty plains",
+        "wide dirt shoulders, old pickup trucks, a black camera car"
+      ],
+      "offset": 15,
+      "count": 6
+    },
+    "Australia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "bollard",
+        "misc"
+      ],
+      "texts": [
+        "single storey brick houses with corrugated metal roofs",
+        "eucalyptus gum trees, dry grass and red outback soil",
+        "yellow diamond warning signs, English language signs",
+        "white dashed centre lines and white edge lines",
+        "white roadside posts with a red reflector strip",
+        "traffic drives on the left, utes and wide suburban streets"
+      ],
+      "offset": 21,
+      "count": 6
     },
     "Austria": {
       "labels": [
@@ -111,8 +247,26 @@
         "crisp white centre lines on well maintained tarmac",
         "white plates with a red and white stripe"
       ],
-      "offset": 10,
+      "offset": 27,
       "count": 6
+    },
+    "Bangladesh": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "unfinished brick buildings and tin roofed roadside shops",
+        "flat green rice paddies, ponds and banana plants",
+        "Bengali script on signs and shop boards",
+        "narrow raised roads with few or no markings",
+        "cycle rickshaws, green CNG auto rickshaws and crowded streets"
+      ],
+      "offset": 33,
+      "count": 5
     },
     "Belgium": {
       "labels": [
@@ -131,8 +285,62 @@
         "motorways lit by long rows of orange street lights",
         "square white concrete bollards"
       ],
-      "offset": 16,
+      "offset": 38,
       "count": 6
+    },
+    "Bermuda": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "pastel houses with white stepped limestone roofs",
+        "subtropical palms, hibiscus hedges and turquoise sea views",
+        "British style signs on a small island",
+        "narrow winding lanes between low stone walls",
+        "traffic drives on the left, many scooters, pink buses"
+      ],
+      "offset": 44,
+      "count": 5
+    },
+    "Bhutan": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "whitewashed buildings with ornate painted wooden windows",
+        "steep forested Himalayan valleys with pine and rhododendron",
+        "Dzongkha script alongside English on signs",
+        "winding mountain roads with painted rock safety slogans",
+        "prayer flags, chortens and people in traditional dress"
+      ],
+      "offset": 49,
+      "count": 5
+    },
+    "Bolivia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "unfinished red brick and adobe houses with flat roofs",
+        "dry treeless altiplano plateau with snow peaks behind",
+        "Spanish language signs, political slogans painted on walls",
+        "faded markings on worn roads, many dirt streets",
+        "minibuses, women in bowler hats and wide skirts"
+      ],
+      "offset": 54,
+      "count": 5
     },
     "Bosnia and Herzegovina": {
       "labels": [
@@ -149,8 +357,46 @@
         "older lower quality camera coverage, narrow patched roads",
         "faded white lines, frequent guardrails on gorge roads"
       ],
-      "offset": 22,
+      "offset": 59,
       "count": 5
+    },
+    "Botswana": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "round thatched huts and small concrete block houses",
+        "flat dry Kalahari thorn scrub and pale sandy soil",
+        "English language signs, wildlife warning signs",
+        "yellow edge lines on long straight flat highways",
+        "donkeys, goats and cattle wandering beside the road"
+      ],
+      "offset": 64,
+      "count": 5
+    },
+    "Brazil": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "low colourful houses with clay tile roofs behind walls and gates",
+        "red soil, tropical vegetation and sugar cane fields",
+        "Portuguese language signs, lombada speed bump warnings",
+        "double yellow centre lines with white edge lines",
+        "round concrete utility poles with many cables",
+        "speed bumps, small roadside bars, motorbikes"
+      ],
+      "offset": 69,
+      "count": 6
     },
     "Bulgaria": {
       "labels": [
@@ -167,7 +413,121 @@
         "black and white striped kerbstones and posts",
         "older camera coverage, worn rural tarmac"
       ],
-      "offset": 27,
+      "offset": 75,
+      "count": 5
+    },
+    "Cambodia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "wooden houses on stilts and ornate Buddhist temple gates",
+        "flat rice paddies dotted with tall sugar palm trees",
+        "Khmer script signs, political party signboards",
+        "red dirt side roads joining a narrow paved road",
+        "motorbikes pulling trailers, tuk tuks and roadside stalls"
+      ],
+      "offset": 80,
+      "count": 5
+    },
+    "Canada": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "detached houses with vinyl siding and large driveways",
+        "conifer and birch forest, lakes, wide prairie fields",
+        "English and French bilingual signs, distances in kilometres",
+        "yellow centre lines with white edge lines",
+        "tall wooden utility poles along wide roads",
+        "pickup trucks, snow banks, wide gravel shoulders"
+      ],
+      "offset": 85,
+      "count": 6
+    },
+    "Chile": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "low houses with corrugated roofs, wooden houses in the south",
+        "dry hills with the Andes behind, vineyards, Atacama desert",
+        "Spanish language signs, Ruta highway shields",
+        "white lines with yellow edge markings on long highways",
+        "concrete utility poles along the roadside",
+        "a white camera truck, long thin coastal desert roads"
+      ],
+      "offset": 91,
+      "count": 6
+    },
+    "Christmas Island": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "small tropical settlement with low houses and a jetty",
+        "dense rainforest, limestone cliffs and red land crabs",
+        "Australian style road signs on a jungle island",
+        "narrow unmarked roads through thick forest",
+        "footpaths, boardwalks and rocky shoreline views"
+      ],
+      "offset": 97,
+      "count": 5
+    },
+    "Colombia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "plates",
+        "misc"
+      ],
+      "texts": [
+        "unfinished red brick houses stacked on steep hillsides",
+        "lush green Andean mountains, coffee and banana plants",
+        "Spanish language signs, yellow diamond warning signs",
+        "double yellow centre lines on winding mountain roads",
+        "bright yellow licence plates on every car",
+        "many motorbikes, colourful buses, roadside stalls"
+      ],
+      "offset": 102,
+      "count": 6
+    },
+    "Costa Rica": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "low houses with corrugated metal roofs and iron window bars",
+        "dense tropical green hills, living fence posts, banana plants",
+        "Spanish language signs, ALTO stop signs",
+        "yellow centre lines on narrow roads with deep roadside ditches",
+        "small sodas and pulperia shops, overcast humid sky"
+      ],
+      "offset": 108,
       "count": 5
     },
     "Croatia": {
@@ -185,7 +545,25 @@
         "white lines with stone walls lining narrow coastal roads",
         "plates with a red and white chequered shield"
       ],
-      "offset": 32,
+      "offset": 113,
+      "count": 5
+    },
+    "Curaçao": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "brightly painted Dutch colonial buildings with gabled roofs",
+        "dry thorny scrub with tall cacti and divi divi trees",
+        "Dutch and Papiamentu signs",
+        "worn roads with faded markings on a flat arid island",
+        "colourful flat roofed houses, oil refinery, turquoise bays"
+      ],
+      "offset": 118,
       "count": 5
     },
     "Cyprus": {
@@ -203,7 +581,7 @@
         "traffic drives on the left, British style road furniture",
         "double yellow lines at the kerb, wide chip seal roads"
       ],
-      "offset": 37,
+      "offset": 123,
       "count": 5
     },
     "Czech Republic": {
@@ -223,7 +601,7 @@
         "white lines on grey tarmac, avenues of roadside trees",
         "red and white striped guardrail ends"
       ],
-      "offset": 42,
+      "offset": 128,
       "count": 6
     },
     "Denmark": {
@@ -241,7 +619,43 @@
         "white lines with wide separate cycle paths beside roads",
         "slim white posts with red reflectors"
       ],
-      "offset": 48,
+      "offset": 134,
+      "count": 5
+    },
+    "Dominican Republic": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "colourful concrete houses with iron grilles and zinc roofs",
+        "royal palms, sugar cane and green tropical hills",
+        "Spanish language signs, colmado corner shops",
+        "yellow centre lines on patched roads",
+        "motorbike taxis, tangled overhead wires, roadside fruit stalls"
+      ],
+      "offset": 139,
+      "count": 5
+    },
+    "Ecuador": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "unfinished concrete block houses with rebar on the roof",
+        "green Andean highlands, volcanoes, banana plantations on the coast",
+        "Spanish language signs, blue tourist signs",
+        "double yellow centre lines on mountain roads",
+        "yellow taxis, pickup trucks carrying passengers"
+      ],
+      "offset": 144,
       "count": 5
     },
     "Estonia": {
@@ -259,7 +673,43 @@
         "white lines on narrow roads, long straight forest corridors",
         "tall snow poles and reflector posts at the verge"
       ],
-      "offset": 53,
+      "offset": 149,
+      "count": 5
+    },
+    "Eswatini": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "scattered homesteads with round huts and tin roofed houses",
+        "rolling green hills with granite boulders and sugar cane",
+        "English language signs on a rural African road",
+        "yellow edge lines on smooth hilly highways",
+        "cattle on the verge, minibuses, people walking the roadside"
+      ],
+      "offset": 154,
+      "count": 5
+    },
+    "Faroe Islands": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "colourful wooden houses, some with turf roofs",
+        "treeless steep green grassy slopes and sea cliffs",
+        "Faroese language signs with the letters eth and o slash",
+        "narrow roads with yellow edge markings and single lane tunnels",
+        "sheep on the road, fog, fjords and waterfalls"
+      ],
+      "offset": 159,
       "count": 5
     },
     "Finland": {
@@ -277,7 +727,7 @@
         "white lines, wide gravel shoulders and reflector posts",
         "frequent gravel roads through unbroken conifer forest"
       ],
-      "offset": 58,
+      "offset": 164,
       "count": 5
     },
     "France": {
@@ -299,7 +749,7 @@
         "plane trees lining roads, farmland and mixed woodland",
         "white EU plates, older coverage with yellow rear plates"
       ],
-      "offset": 63,
+      "offset": 169,
       "count": 7
     },
     "Germany": {
@@ -319,8 +769,44 @@
         "crisp white lines on smooth well maintained tarmac",
         "red and white striped kerb posts, immaculate road surfaces"
       ],
-      "offset": 70,
+      "offset": 176,
       "count": 6
+    },
+    "Ghana": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "concrete block houses, kiosks and shipping container shops",
+        "red laterite soil with oil palms and plantain",
+        "English language signs, religious shop names",
+        "open concrete drains beside worn roads",
+        "tro tro minibuses, taxis with orange corner panels, a visible roof rack"
+      ],
+      "offset": 182,
+      "count": 5
+    },
+    "Gibraltar": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "dense apartment blocks and British colonial buildings",
+        "a huge limestone rock rising above the town and harbour",
+        "English language signs with British style road furniture",
+        "narrow steep streets with yellow kerb lines",
+        "red post boxes and phone boxes, traffic on the right"
+      ],
+      "offset": 187,
+      "count": 5
     },
     "Greece": {
       "labels": [
@@ -337,7 +823,81 @@
         "faded white lines on narrow winding roads with low walls",
         "roadside shrines, unfinished concrete frames, dry stone walls"
       ],
-      "offset": 76,
+      "offset": 192,
+      "count": 5
+    },
+    "Greenland": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "brightly coloured wooden houses perched on bare rock",
+        "no trees, bare granite, icebergs floating in a fjord",
+        "Greenlandic and Danish signs",
+        "short gravel and unmarked asphalt roads in a small town",
+        "snow patches, sled dogs, pipes and wooden stairways"
+      ],
+      "offset": 197,
+      "count": 5
+    },
+    "Guam": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "flat roofed concrete typhoon proof houses",
+        "tropical jungle, coconut palms and coastal cliffs",
+        "American style road signs on a Pacific island",
+        "yellow centre lines on wide pale coral asphalt roads",
+        "thick concrete utility poles",
+        "American pickup trucks, strip malls, military fences"
+      ],
+      "offset": 202,
+      "count": 6
+    },
+    "Guatemala": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "concrete block houses with corrugated metal roofs",
+        "green highlands with volcano cones and maize fields",
+        "Spanish language signs, hand painted shop walls",
+        "yellow centre lines on winding highland roads",
+        "brightly painted chicken buses, tuk tuks, speed bumps"
+      ],
+      "offset": 208,
+      "count": 5
+    },
+    "Hong Kong": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "extremely dense forest of tall narrow apartment towers",
+        "steep green subtropical hills right behind the city",
+        "traditional Chinese and English bilingual signs",
+        "yellow road markings, zigzag lines and railings at the kerb",
+        "double decker buses, red taxis, traffic on the left"
+      ],
+      "offset": 213,
       "count": 5
     },
     "Hungary": {
@@ -355,7 +915,7 @@
         "black and white striped kerbstones",
         "white lines on flat straight roads with tree avenues"
       ],
-      "offset": 81,
+      "offset": 218,
       "count": 5
     },
     "Iceland": {
@@ -373,8 +933,48 @@
         "yellow centre lines and yellow topped reflector posts",
         "gravel roads, distant glaciers, wide empty basalt landscapes"
       ],
-      "offset": 86,
+      "offset": 223,
       "count": 5
+    },
+    "India": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "painted concrete buildings with shop shutters and water tanks",
+        "dusty plains, banyan and neem trees, palm trees in the south",
+        "Hindi or regional script alongside English",
+        "black and yellow striped kerbs and road dividers",
+        "white lines on crowded roads with unpaved edges",
+        "auto rickshaws, cows on the road, decorated trucks"
+      ],
+      "offset": 228,
+      "count": 6
+    },
+    "Indonesia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "low houses with red clay tile roofs and tiled porches",
+        "rice terraces, coconut palms and banana plants",
+        "Indonesian language signs, Jalan street names",
+        "black and white striped kerbs",
+        "white lines on narrow roads crowded with scooters",
+        "swarms of scooters, small warung stalls, traffic on the left"
+      ],
+      "offset": 234,
+      "count": 6
     },
     "Ireland": {
       "labels": [
@@ -395,8 +995,46 @@
         "boxy houses with the front door in the centre",
         "traffic drives on the left, distances in kilometres"
       ],
-      "offset": 91,
+      "offset": 240,
       "count": 7
+    },
+    "Isle of Man": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "lines"
+      ],
+      "texts": [
+        "grey stone cottages and Victorian seafront terraces",
+        "green hills, gorse hedges and dry stone walls",
+        "British style signs on a small island",
+        "black and white painted kerbs on racing road bends",
+        "white lines on narrow hedged lanes, traffic on the left"
+      ],
+      "offset": 247,
+      "count": 5
+    },
+    "Israel": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "plates",
+        "bollard"
+      ],
+      "texts": [
+        "pale stone apartment blocks with solar water tanks on the roofs",
+        "dry rocky hills with pine, olive and cypress trees",
+        "Hebrew, Arabic and English trilingual signs",
+        "yellow edge lines with white centre lines",
+        "long yellow licence plates",
+        "red and white striped kerbs"
+      ],
+      "offset": 252,
+      "count": 6
     },
     "Italy": {
       "labels": [
@@ -415,8 +1053,154 @@
         "white lines on narrow roads walled by stone or hedge",
         "roadside shrines, tightly packed hilltop villages"
       ],
-      "offset": 98,
+      "offset": 258,
       "count": 6
+    },
+    "Japan": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "poles",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "compact houses with grey tiled roofs packed close together",
+        "forested mountains, cedar woods and flooded rice paddies",
+        "Japanese kanji and kana signs, blue circular mirrors",
+        "utility poles with yellow and black striped guards and dense wires",
+        "narrow streets with white edge lines and no pavement",
+        "tiny kei cars, vending machines, traffic on the left"
+      ],
+      "offset": 264,
+      "count": 6
+    },
+    "Jersey": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "pink granite farmhouses and cottages",
+        "narrow lanes sunk between high hedge banks and granite walls",
+        "British style signs with French road names",
+        "yellow line across the road at junctions",
+        "traffic on the left, small fields, glimpses of the sea"
+      ],
+      "offset": 270,
+      "count": 5
+    },
+    "Jordan": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "boxy beige limestone buildings with white water tanks on top",
+        "barren rocky desert hills with scattered olive trees",
+        "Arabic and English bilingual signs",
+        "yellow edge lines on wide desert highways",
+        "unfinished concrete pillars on roofs, speed bumps, dust"
+      ],
+      "offset": 275,
+      "count": 5
+    },
+    "Kazakhstan": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "Soviet apartment blocks and low houses behind metal fences",
+        "vast flat treeless steppe to the horizon",
+        "Cyrillic signs in Kazakh and Russian",
+        "white lines on very long straight roads",
+        "old Soviet cars, roadside cemeteries, a visible roof rack"
+      ],
+      "offset": 280,
+      "count": 5
+    },
+    "Kenya": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "tin roofed shops painted in bright advertising colours",
+        "red soil, acacia trees and dry savanna",
+        "English and Swahili signs",
+        "yellow edge lines on worn tarmac with dirt shoulders",
+        "matatu minibuses, motorbike taxis, a snorkel on the camera car"
+      ],
+      "offset": 285,
+      "count": 5
+    },
+    "Kosovo": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "large unfinished red brick houses with no render",
+        "green rolling hills and plains ringed by mountains",
+        "Albanian and Serbian bilingual signs",
+        "white lines on newly built roads",
+        "minarets in villages, Albanian flags, car washes and petrol stations"
+      ],
+      "offset": 290,
+      "count": 5
+    },
+    "Kyrgyzstan": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "old village houses with blue painted window frames and fences",
+        "snow capped Tian Shan mountains above dry valleys, poplar rows",
+        "Cyrillic signs in Kyrgyz and Russian",
+        "worn roads lined with white painted tree trunks",
+        "horses and sheep on the road, yurts, a visible roof rack"
+      ],
+      "offset": 295,
+      "count": 5
+    },
+    "Laos": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "wooden stilt houses and gilded Buddhist temples",
+        "jungle covered karst hills and red dirt",
+        "Lao script signs",
+        "narrow paved road with red dirt edges and few markings",
+        "scooters, roaming chickens and dogs, Beerlao signs"
+      ],
+      "offset": 300,
+      "count": 5
     },
     "Latvia": {
       "labels": [
@@ -433,7 +1217,43 @@
         "white lines on narrow roads, many unpaved gravel stretches",
         "black and white striped posts at the verge"
       ],
-      "offset": 104,
+      "offset": 305,
+      "count": 5
+    },
+    "Lebanon": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "dense concrete apartment blocks climbing steep hillsides",
+        "Mediterranean mountains with pines and terraces",
+        "Arabic and French signs",
+        "tangled overhead electricity wires across the street",
+        "old Mercedes taxis, political posters, roadside billboards"
+      ],
+      "offset": 310,
+      "count": 5
+    },
+    "Lesotho": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "round stone huts with thatched roofs",
+        "treeless high grassy mountains and eroded gullies",
+        "English and Sesotho signs",
+        "winding mountain passes with yellow edge lines",
+        "herders wrapped in blankets, people on horseback"
+      ],
+      "offset": 315,
       "count": 5
     },
     "Liechtenstein": {
@@ -451,7 +1271,7 @@
         "flawless white lines on very clean narrow roads",
         "dense tidy villages against sudden steep mountain walls"
       ],
-      "offset": 109,
+      "offset": 320,
       "count": 5
     },
     "Lithuania": {
@@ -469,7 +1289,7 @@
         "white lines on flat straight roads with wide verges",
         "white posts with red reflectors along the shoulder"
       ],
-      "offset": 114,
+      "offset": 325,
       "count": 5
     },
     "Luxembourg": {
@@ -487,8 +1307,66 @@
         "white lines on smooth well kept narrow roads",
         "dense forest valleys with very tidy small villages"
       ],
-      "offset": 119,
+      "offset": 330,
       "count": 5
+    },
+    "Macau": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "plates",
+        "misc"
+      ],
+      "texts": [
+        "huge casino hotels beside old crowded apartment blocks",
+        "dense city with banyan trees in small squares",
+        "Chinese and Portuguese bilingual street signs on blue tiles",
+        "black and white wave pattern mosaic pavements",
+        "black licence plates with white letters",
+        "rows of parked scooters, traffic on the left"
+      ],
+      "offset": 335,
+      "count": 6
+    },
+    "Madagascar": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "tall narrow red brick houses with steep roofs",
+        "red laterite earth, rice paddies and bare eroded hills",
+        "French and Malagasy signs",
+        "potholed roads and dirt tracks without markings",
+        "zebu carts, pousse pousse rickshaws, wooden market stalls"
+      ],
+      "offset": 341,
+      "count": 5
+    },
+    "Malaysia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "plates",
+        "misc"
+      ],
+      "texts": [
+        "rows of terraced shophouses and houses with tiled roofs",
+        "endless oil palm plantations and jungle hills",
+        "Malay language signs, Jalan street names",
+        "black and white striped kerbs",
+        "black licence plates with white letters",
+        "traffic on the left, small motorbikes, mosques with domes"
+      ],
+      "offset": 346,
+      "count": 6
     },
     "Malta": {
       "labels": [
@@ -505,7 +1383,25 @@
         "traffic drives on the left, very narrow walled lanes",
         "worn markings, dry stone walls right at the road edge"
       ],
-      "offset": 124,
+      "offset": 352,
+      "count": 5
+    },
+    "Mexico": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "colourful flat roofed concrete houses with rebar sticking up",
+        "dry scrub with cactus and agave, dusty hills",
+        "Spanish language signs, ALTO stop signs",
+        "yellow centre lines, frequent tope speed bumps",
+        "black rooftop water tanks, taco stands, painted shop walls"
+      ],
+      "offset": 357,
       "count": 5
     },
     "Monaco": {
@@ -523,7 +1419,25 @@
         "luxury cars, tunnels, multi level roads above the sea",
         "immaculate white lines on steep urban switchbacks"
       ],
-      "offset": 129,
+      "offset": 362,
+      "count": 5
+    },
+    "Mongolia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "white felt gers and wooden fenced compounds",
+        "vast treeless grassy steppe and bare hills",
+        "Mongolian Cyrillic signs",
+        "dirt tracks crossing open grassland",
+        "herds of horses, camping gear strapped to the camera car roof"
+      ],
+      "offset": 367,
       "count": 5
     },
     "Montenegro": {
@@ -541,7 +1455,43 @@
         "narrow roads with frequent guardrails above steep drops",
         "older camera coverage, tunnels cut through bare rock"
       ],
-      "offset": 134,
+      "offset": 372,
+      "count": 5
+    },
+    "Namibia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "German colonial buildings and tin roofed houses",
+        "desert plains, dry thorn savanna and rocky hills",
+        "English language signs, wildlife warning signs",
+        "wide straight gravel roads raising dust",
+        "endless wire fences, huge empty landscapes, traffic on the left"
+      ],
+      "offset": 377,
+      "count": 5
+    },
+    "Nepal": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "colourful multi storey concrete houses with roof terraces",
+        "terraced Himalayan hillsides and snow peaks",
+        "Devanagari script signs",
+        "rough broken mountain roads with dust and rubble",
+        "decorated trucks and buses, prayer flags, motorbikes"
+      ],
+      "offset": 382,
       "count": 5
     },
     "Netherlands": {
@@ -559,7 +1509,45 @@
         "red asphalt cycle paths beside white lined roads",
         "canals, dykes, huge numbers of bicycles, wind turbines"
       ],
-      "offset": 139,
+      "offset": 387,
+      "count": 5
+    },
+    "New Zealand": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "wooden weatherboard houses with corrugated iron roofs",
+        "bright green sheep pasture on steep hills, tree ferns",
+        "yellow diamond warning signs, English and Maori place names",
+        "white roadside posts with a red reflector band",
+        "white centre lines with yellow no overtaking lines",
+        "one lane bridges, traffic on the left, wire farm fences"
+      ],
+      "offset": 392,
+      "count": 6
+    },
+    "Nigeria": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "walled compounds and concrete buildings with rusty tin roofs",
+        "red soil with palms and dense green bush",
+        "English language signs, church and school billboards",
+        "worn roads with open gutters and sandy edges",
+        "yellow minibuses and tricycles, a police escort car following"
+      ],
+      "offset": 398,
       "count": 5
     },
     "North Macedonia": {
@@ -577,7 +1565,25 @@
         "older lower quality camera coverage, patched narrow roads",
         "faded white lines, black and white striped kerbstones"
       ],
-      "offset": 144,
+      "offset": 403,
+      "count": 5
+    },
+    "Northern Mariana Islands": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "low concrete houses and resort hotels by the beach",
+        "tropical jungle, flame trees and turquoise lagoon",
+        "American style road signs on a small tropical island",
+        "yellow centre lines on quiet coastal roads",
+        "wartime bunkers and memorials, beach parks"
+      ],
+      "offset": 408,
       "count": 5
     },
     "Norway": {
@@ -595,8 +1601,118 @@
         "yellow centre lines and white edge lines",
         "frequent long tunnels, rock cuttings, guardrails on fjord roads"
       ],
-      "offset": 149,
+      "offset": 413,
       "count": 5
+    },
+    "Oman": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "white flat roofed villas with crenellated walls and arches",
+        "barren brown rocky mountains and date palm oases",
+        "Arabic and English bilingual signs",
+        "smooth highways with yellow edge lines and rows of street lights",
+        "white SUVs, mosques with small domes, gravel desert"
+      ],
+      "offset": 418,
+      "count": 5
+    },
+    "Palestine": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "plates",
+        "misc"
+      ],
+      "texts": [
+        "pale stone houses with black water tanks on flat roofs",
+        "terraced rocky hills with olive groves",
+        "Arabic signs, some with Hebrew and English",
+        "white licence plates with green letters",
+        "minarets, yellow taxis, unfinished upper floors"
+      ],
+      "offset": 423,
+      "count": 5
+    },
+    "Panama": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "low houses with zinc roofs, glass skyscrapers in the city",
+        "humid tropical forest and green cattle pasture",
+        "Spanish language signs in American highway style",
+        "yellow centre lines on concrete slab roads",
+        "painted old school buses, yellow taxis"
+      ],
+      "offset": 428,
+      "count": 5
+    },
+    "Paraguay": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "low brick houses with tiled porches and shady yards",
+        "red earth, flat subtropical farmland and palm trees",
+        "Spanish language signs",
+        "rough cobblestone side streets beside red dirt roads",
+        "motorbikes, roadside terere stalls, cattle ranches"
+      ],
+      "offset": 433,
+      "count": 5
+    },
+    "Peru": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "unfinished brick and adobe houses with rebar on flat roofs",
+        "bare coastal desert or dry Andean valleys",
+        "Spanish language signs, election slogans painted on walls",
+        "yellow centre lines on dusty roads",
+        "three wheeled mototaxis, combi minibuses"
+      ],
+      "offset": 438,
+      "count": 5
+    },
+    "Philippines": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "concrete houses with corrugated roofs behind painted walls",
+        "coconut palms, banana plants and rice fields",
+        "English and Tagalog signs, sari sari store boards",
+        "pale concrete slab roads with visible joints",
+        "leaning poles with tangled bundles of wires",
+        "jeepneys and motorbike sidecar tricycles"
+      ],
+      "offset": 443,
+      "count": 6
     },
     "Poland": {
       "labels": [
@@ -615,7 +1731,7 @@
         "white lines on narrow roads with tree avenues",
         "white posts with red reflector bands"
       ],
-      "offset": 154,
+      "offset": 449,
       "count": 6
     },
     "Portugal": {
@@ -633,7 +1749,43 @@
         "white lines on dark tarmac, cobbled village streets",
         "black and white cobbled pavements, many eucalyptus stands"
       ],
-      "offset": 160,
+      "offset": 455,
+      "count": 5
+    },
+    "Puerto Rico": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "flat roofed concrete houses with iron grilles in bright colours",
+        "steep green tropical hills with palms and flamboyant trees",
+        "American style road signs written in Spanish",
+        "yellow centre lines on narrow winding hill roads",
+        "kilometre markers, roadside food kiosks, American cars"
+      ],
+      "offset": 460,
+      "count": 5
+    },
+    "Qatar": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "beige walled villas and glass skyscrapers",
+        "flat pale desert with planted date palms",
+        "Arabic and English bilingual signs",
+        "wide new multi lane highways with ornate street lights",
+        "white SUVs, construction sites, sandy empty plots"
+      ],
+      "offset": 465,
       "count": 5
     },
     "Romania": {
@@ -651,7 +1803,99 @@
         "orthodox churches, horse carts, older camera coverage",
         "black and white striped kerbstones and posts"
       ],
-      "offset": 165,
+      "offset": 470,
+      "count": 5
+    },
+    "Russia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "wooden village houses with carved window frames, grey panel blocks",
+        "birch and pine forest, wide flat fields",
+        "Russian Cyrillic signs, blue direction signs",
+        "black and white striped posts and kerbs",
+        "white lines on wide roads with muddy verges",
+        "Lada cars, overhead gas pipes, a visible roof antenna"
+      ],
+      "offset": 475,
+      "count": 6
+    },
+    "Rwanda": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "small brick houses with tin roofs on hillsides",
+        "green terraced hills with banana plants and eucalyptus",
+        "English, French and Kinyarwanda signs",
+        "very clean roads with neat kerbs and trimmed verges",
+        "motorcycle taxis with helmets, people carrying loads on bicycles"
+      ],
+      "offset": 481,
+      "count": 5
+    },
+    "Réunion": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "misc"
+      ],
+      "texts": [
+        "creole houses with tin roofs and wooden trim",
+        "sugar cane fields below steep volcanic mountains",
+        "French road signs and road furniture on a tropical island",
+        "French style white bollards with a red band",
+        "French licence plates, palm trees, clouds on the peaks"
+      ],
+      "offset": 486,
+      "count": 5
+    },
+    "San Marino": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "plates"
+      ],
+      "texts": [
+        "stone old town with fortress towers on a cliff top",
+        "green rolling hills seen from high above",
+        "Italian language signs",
+        "steep winding roads with stone retaining walls",
+        "white licence plates with blue letters and a coat of arms"
+      ],
+      "offset": 491,
+      "count": 5
+    },
+    "Senegal": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "flat roofed concrete block buildings and walled compounds",
+        "dry sandy Sahel with baobab and acacia trees",
+        "French language signs",
+        "sand drifting over the edges of paved roads",
+        "horse carts, colourful painted minibuses, yellow and black taxis"
+      ],
+      "offset": 496,
       "count": 5
     },
     "Serbia": {
@@ -669,8 +1913,28 @@
         "black and white striped kerbstones",
         "older camera coverage, wide flat maize fields"
       ],
-      "offset": 170,
+      "offset": 501,
       "count": 5
+    },
+    "Singapore": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "plates",
+        "misc"
+      ],
+      "texts": [
+        "tall public housing blocks with numbers painted on the side",
+        "lush rain trees arching over spotless roads",
+        "English language signs, green street name signs",
+        "double yellow and zigzag lines along the kerb",
+        "black licence plates with white letters",
+        "traffic on the left, covered walkways, overhead toll gantries"
+      ],
+      "offset": 506,
+      "count": 6
     },
     "Slovakia": {
       "labels": [
@@ -689,7 +1953,7 @@
         "white lines on narrow valley roads with tree avenues",
         "wooded ridges rising directly behind small villages"
       ],
-      "offset": 175,
+      "offset": 512,
       "count": 6
     },
     "Slovenia": {
@@ -707,7 +1971,43 @@
         "crisp white lines on very well maintained narrow roads",
         "hayracks in fields, onion domed church towers on hilltops"
       ],
-      "offset": 181,
+      "offset": 518,
+      "count": 5
+    },
+    "South Africa": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "walled houses with electric fences, tin shack townships",
+        "dry veld grassland, flat topped hills, fynbos scrub",
+        "English and Afrikaans signs, white on green direction signs",
+        "yellow edge lines with white centre lines",
+        "minibus taxis, pickup trucks, traffic on the left"
+      ],
+      "offset": 523,
+      "count": 5
+    },
+    "South Korea": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "rows of identical tall apartment towers, blue and orange metal roofs",
+        "forested hills, rice paddies and plastic greenhouses",
+        "Korean Hangul signs",
+        "yellow centre lines, blue bus lane lines",
+        "convex mirrors, speed cameras, white and grey sedans"
+      ],
+      "offset": 528,
       "count": 5
     },
     "Spain": {
@@ -725,7 +2025,43 @@
         "white lines on wide smooth roads through dry country",
         "dry stone terraces, dusty verges, sparse holm oak dehesa"
       ],
-      "offset": 186,
+      "offset": 533,
+      "count": 5
+    },
+    "Sri Lanka": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "low houses with red tile roofs and verandas behind garden walls",
+        "lush coconut palms, banana plants and tea covered hills",
+        "Sinhala, Tamil and English trilingual signs",
+        "white dashed centre line on narrow busy roads",
+        "tuk tuks, red public buses, traffic on the left"
+      ],
+      "offset": 538,
+      "count": 5
+    },
+    "Svalbard": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "colourful wooden houses raised on stilts above the ground",
+        "arctic tundra with no trees, bare mountains and glaciers",
+        "Norwegian signs, polar bear warning signs",
+        "gravel roads beside pipes running above ground",
+        "snowmobiles parked outside houses, old mining structures"
+      ],
+      "offset": 543,
       "count": 5
     },
     "Sweden": {
@@ -743,7 +2079,7 @@
         "white lines on wide roads with tall reflector posts",
         "long straight forest roads, rock cuttings, red barns"
       ],
-      "offset": 191,
+      "offset": 548,
       "count": 5
     },
     "Switzerland": {
@@ -761,8 +2097,86 @@
         "flawless white lines on pristine narrow mountain roads",
         "very clean road furniture, cable cars, hillside cow pasture"
       ],
-      "offset": 196,
+      "offset": 553,
       "count": 5
+    },
+    "São Tomé and Príncipe": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "crumbling Portuguese colonial plantation buildings, wooden stilt houses",
+        "dense tropical rainforest on steep volcanic peaks",
+        "Portuguese language signs",
+        "narrow potholed coastal roads without markings",
+        "yellow taxis, laundry drying on the ground, fishing canoes"
+      ],
+      "offset": 558,
+      "count": 5
+    },
+    "Taiwan": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "concrete shophouses with covered arcades and metal roof sheds",
+        "steep green mountains, betel nut palms and rice paddies",
+        "traditional Chinese signs, dense vertical shop signs",
+        "yellow centre lines, red painted kerbs",
+        "utility poles wrapped in yellow and black stripes",
+        "swarms of scooters and rows of them parked on the street"
+      ],
+      "offset": 563,
+      "count": 6
+    },
+    "Thailand": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "spirit houses on posts, gilded temples with steep red roofs",
+        "palm trees, rice paddies and tropical greenery",
+        "Thai script signs, portraits of the king over the road",
+        "yellow centre lines with white edge lines",
+        "square concrete utility poles",
+        "pickup trucks, scooters, traffic on the left"
+      ],
+      "offset": 569,
+      "count": 6
+    },
+    "Tunisia": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "bollard",
+        "plates",
+        "misc"
+      ],
+      "texts": [
+        "white cubic houses with blue doors and shutters",
+        "olive groves, prickly pear hedges and dry plains",
+        "Arabic and French bilingual signs",
+        "red and white painted kerbs",
+        "black licence plates with white Arabic script",
+        "yellow taxis, unfinished brick upper floors"
+      ],
+      "offset": 575,
+      "count": 6
     },
     "Turkey": {
       "labels": [
@@ -779,7 +2193,43 @@
         "mosques with slim minarets, frequent red Turkish flags",
         "white lines on wide roads, dusty gravel shoulders"
       ],
-      "offset": 201,
+      "offset": 581,
+      "count": 5
+    },
+    "US Virgin Islands": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "colourful Caribbean houses with hipped roofs on steep slopes",
+        "green hills dropping to turquoise bays, palms and sea grape",
+        "American style road signs on a Caribbean island",
+        "yellow centre lines with traffic on the left in American cars",
+        "open air safari taxis, steep switchback roads"
+      ],
+      "offset": 586,
+      "count": 5
+    },
+    "Uganda": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "shops painted in bright advertising colours with tin roofs",
+        "red soil and lush green banana plants",
+        "English language signs, school and church signposts",
+        "red dirt shoulders beside a paved road",
+        "boda boda motorbike taxis, people selling goods at the roadside"
+      ],
+      "offset": 591,
       "count": 5
     },
     "Ukraine": {
@@ -797,7 +2247,25 @@
         "concrete utility poles along wide open plains",
         "long straight roads, sunflower fields, worn tarmac"
       ],
-      "offset": 206,
+      "offset": 596,
+      "count": 5
+    },
+    "United Arab Emirates": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "glass skyscrapers and white walled villas",
+        "orange sand dunes and planted date palms",
+        "Arabic and English bilingual signs",
+        "very wide multi lane highways with rows of street lights",
+        "white SUVs, mosques, construction cranes"
+      ],
+      "offset": 601,
       "count": 5
     },
     "United Kingdom": {
@@ -815,7 +2283,63 @@
         "traffic drives on the left, roundabouts and yellow kerb lines",
         "white lines on narrow lanes enclosed by high hedges"
       ],
-      "offset": 211,
+      "offset": 606,
+      "count": 5
+    },
+    "United States": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "poles",
+        "misc"
+      ],
+      "texts": [
+        "detached wooden houses with front lawns and no fences",
+        "wide open landscapes, farmland, forest or desert",
+        "English language signs, green highway signs with distances in miles",
+        "double yellow centre lines with white edge lines",
+        "wooden utility poles along wide roads",
+        "pickup trucks, mailboxes at the roadside, yellow school buses"
+      ],
+      "offset": 611,
+      "count": 6
+    },
+    "Uruguay": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "low flat roofed houses with small front gardens",
+        "gently rolling green pasture with cattle and eucalyptus stands",
+        "Spanish language signs, Ruta highway markers",
+        "white lines on quiet two lane roads",
+        "old cars, palm trees along the coast, wire farm fences"
+      ],
+      "offset": 617,
+      "count": 5
+    },
+    "Vietnam": {
+      "labels": [
+        "arch",
+        "flora",
+        "signs",
+        "lines",
+        "misc"
+      ],
+      "texts": [
+        "tall narrow tube houses with balconies",
+        "rice paddies, limestone karst peaks and palms",
+        "Vietnamese signs in Latin script with many accent marks",
+        "yellow centre lines on roads crowded with motorbikes",
+        "red flags with a yellow star, street vendors in conical hats"
+      ],
+      "offset": 622,
       "count": 5
     }
   },
@@ -826,5 +2350,129 @@
   "view_pitch": -5.0,
   "view_px": 320,
   "pano_zoom": 2,
-  "tile_px": 512
+  "tile_px": 512,
+  "iso": [
+    "AL",
+    "AS",
+    "AD",
+    "AR",
+    "AU",
+    "AT",
+    "BD",
+    "BE",
+    "BM",
+    "BT",
+    "BO",
+    "BA",
+    "BW",
+    "BR",
+    "BG",
+    "KH",
+    "CA",
+    "CL",
+    "CX",
+    "CO",
+    "CR",
+    "HR",
+    "CW",
+    "CY",
+    "CZ",
+    "DK",
+    "DO",
+    "EC",
+    "EE",
+    "SZ",
+    "FO",
+    "FI",
+    "FR",
+    "DE",
+    "GH",
+    "GI",
+    "GR",
+    "GL",
+    "GU",
+    "GT",
+    "HK",
+    "HU",
+    "IS",
+    "IN",
+    "ID",
+    "IE",
+    "IM",
+    "IL",
+    "IT",
+    "JP",
+    "JE",
+    "JO",
+    "KZ",
+    "KE",
+    "XK",
+    "KG",
+    "LA",
+    "LV",
+    "LB",
+    "LS",
+    "LI",
+    "LT",
+    "LU",
+    "MO",
+    "MG",
+    "MY",
+    "MT",
+    "MX",
+    "MC",
+    "MN",
+    "ME",
+    "NA",
+    "NP",
+    "NL",
+    "NZ",
+    "NG",
+    "MK",
+    "MP",
+    "NO",
+    "OM",
+    "PS",
+    "PA",
+    "PY",
+    "PE",
+    "PH",
+    "PL",
+    "PT",
+    "PR",
+    "QA",
+    "RO",
+    "RU",
+    "RW",
+    "RE",
+    "SM",
+    "SN",
+    "RS",
+    "SG",
+    "SK",
+    "SI",
+    "ZA",
+    "KR",
+    "ES",
+    "LK",
+    "SJ",
+    "SE",
+    "CH",
+    "ST",
+    "TW",
+    "TH",
+    "TN",
+    "TR",
+    "VI",
+    "UG",
+    "UA",
+    "AE",
+    "GB",
+    "US",
+    "UY",
+    "VN"
+  ],
+  "model_version": "global-3",
+  "temperature_folded": 0.6384,
+  "regions": 576
 }

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "GeoGuessr Assistant",
-  "version": "2.0.0",
-  "description": "Predicts the country from Street View imagery with an on-device model, and shows the visual evidence behind the guess.",
+  "version": "3.0.0",
+  "description": "Predicts the country from Street View imagery with an on-device model, with honest confidence and a map of the region.",
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -38,13 +38,21 @@
         "https://openguessr.com/*",
         "https://www.openguessr.com/*",
         "https://worldguessr.com/*",
-        "https://www.worldguessr.com/*",
-        "https://freeguessr.com/*",
-        "https://www.freeguessr.com/*"
+        "https://www.worldguessr.com/*"
       ],
       "js": [
-        "europe_paths.js",
+        "map_paths.js",
         "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://www.google.com/maps/embed/*"
+      ],
+      "js": [
+        "embed_bridge.js"
       ],
       "run_at": "document_start",
       "all_frames": true

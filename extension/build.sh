@@ -6,11 +6,15 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # The model and the WASM runtime are too large for git, so a fresh clone
-# has to regenerate them:
-#   model/*  ->  python3 ../export_web.py
+# has to supply them:
+#   model/visual.fp16.onnx, model/head.onnx  ->  the fine-tuned 3.0 model, produced
+#       by the training pipeline (kept out of this repository with its data)
+#   model/cues.f32 + cue index in model_meta.json  ->  python3 ../make_cues.py
+#   map_paths.js  ->  python3 ../make_maps.py --ne ne_50m_admin_0_countries.geojson
+#       (re-run whenever the class list changes)
 #   vendor/* ->  npm pack onnxruntime-web@1.20.1, then copy from dist/
-for f in model/visual.fp16.onnx model/head.onnx model/model_meta.json; do
-  [ -f "$f" ] || { echo "missing $f — run 'python3 ../export_web.py' first" >&2; exit 1; }
+for f in model/visual.fp16.onnx model/head.onnx model/model_meta.json model/cues.f32 map_paths.js; do
+  [ -f "$f" ] || { echo "missing $f — see the notes at the top of build.sh" >&2; exit 1; }
 done
 for f in vendor/ort.webgpu.min.js vendor/ort-wasm-simd-threaded.jsep.wasm; do
   [ -f "$f" ] || { echo "missing $f — copy it from onnxruntime-web@1.20.1/dist/" >&2; exit 1; }
@@ -21,7 +25,7 @@ OUT="geoguessr-assistant-${VER}.zip"
 rm -f "$OUT"
 
 zip -r -X "$OUT" \
-  manifest.json background.js content.js geoclip_core.js europe_paths.js \
+  manifest.json background.js content.js embed_bridge.js geoclip_core.js map_paths.js \
   offscreen.html offscreen.js popup.html popup.js \
   icons model vendor \
   -x '.*' -x '__MACOSX/*' -x '*.map' -x 'model/_*' >/dev/null

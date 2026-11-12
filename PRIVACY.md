@@ -1,6 +1,6 @@
 # Privacy Policy — GeoGuessr Assistant
 
-**Last updated: 1 November 2026**
+**Last updated: 12 November 2026**
 
 GeoGuessr Assistant displays a country prediction for the Street View imagery
 currently on screen. The model runs **on your own device**, inside the
@@ -47,6 +47,15 @@ that appear in the URLs of image tiles the page is already loading. It reads
 nothing else: not your account, not your game history, not page text, not
 cookies, not form fields, not other tabs.
 
+OpenGuessr and WorldGuessr show Street View inside an embedded Google Maps
+frame (`www.google.com/maps/embed/…`), so the tiles are loaded by that frame
+rather than by the page. A small part of the extension therefore also runs
+inside those embedded frames — and only when the page around them is one of
+the supported sites; inside a Google Maps embed on any other website it does
+nothing. There it reads the same panorama identifiers from the tile URLs and
+passes them to the panel, and nothing else. It does not read the embed's own
+address, which on these sites contains the round's location.
+
 ## The one network request the extension makes
 
 To analyse a panorama the extension downloads that panorama's own image
@@ -73,7 +82,8 @@ is never uploaded anywhere.
 
 ## Sites the extension runs on
 
-`geoguessr.com`, `openguessr.com`, `worldguessr.com`, `freeguessr.com`.
+`geoguessr.com`, `openguessr.com`, `worldguessr.com` — plus Google Maps
+Street View embeds, but only inside those three sites (see above).
 
 It is inactive on every other site. It additionally disables itself when the
 page URL indicates a multiplayer mode (duels, team duels, battle royale,
@@ -87,8 +97,11 @@ parties, lobbies, ranked and similar).
   offscreen document. It displays nothing and is never visible.
 - **Access to `streetviewpixels-pa.googleapis.com`** — to download the
   panorama tiles described above.
-- **Access to the four guessing sites** — to read the panorama identifier
+- **Access to the three guessing sites** — to read the panorama identifier
   from the page's own resource loads and to draw the prediction panel.
+- **A script in `www.google.com/maps/embed/*` frames** — to read the
+  panorama identifier where a supported site shows Street View in an
+  embedded Google map (see above). It exits immediately on other sites.
 
 The extension requests no other permissions. It does not use `tabs`,
 `activeTab`, `webRequest`, `cookies`, `history`, or `nativeMessaging`, and
